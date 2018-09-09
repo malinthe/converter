@@ -530,9 +530,14 @@ function startText() {
   text = text.replace(/ￕ/g, ']');
   text = text.replace(/ඏ/g, 'Ì');
   text = text.replace(/ඐ/g, 'Ï');
+  text = text.replace(/ඦ/g, '`c');
 
   text = text.replace(/“/g, '—');
   text = text.replace(/”/g, '˜');
+
+  // cleanup
+  text = text.replace(/`ca/g, '`Ê');
+  text = text.replace(/`cs/g, '`ð');
 
   document.converter.abhaya.value = text;
 }
