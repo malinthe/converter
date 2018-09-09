@@ -22,20 +22,31 @@
 				<h1 class="p-3 text-center">Unicode to FMAbhaya Converter</h1>
 				<hr>
 				<br>
-				<form name="converter">
+
+				<form name="converter" class="mb-3">
 					<div class="box">
 						<h4>Unicode (යුනිකෝඩ්)</h4>
-						<textarea class="form-control" onKeyUp="startText();" onClick="startText();" name="unicode" rows="7" onSelect="startText();"
+						<textarea class="form-control" onKeyUp="startText()" onClick="startText()" name="unicode" rows="7" onSelect="startText()"
 						 placeholder="Type or paste Sinhala Unicode text here"></textarea>
 						<br/>
 					</div>
 
 					<div class="box">
 						<h4>FMAbhaya (අභය)</h4>
-						<textarea class="form-control" style="font-family:'FMAbhaya X', FMAbhaya, sans-serif!important;" name="abhaya" rows="7"></textarea>
+						<textarea class="form-control" style="font-family:'FMAbhaya X', FMAbhaya, sans-serif!important;" id="abhaya" name="abhaya"
+						 rows="7"></textarea>
 						<br/>
+
+						<div class="row">
+							<div class="col">
+								<input id="copy" value="Copy Abhaya Text" type="button" class="ml-1 float-right btn btn-primary" onclick="copyText()" data-placement="top"
+								 data-toggle="popover" title="Copy" data-content="Converted text copied to clipboard.">
+								<input value="Reset" type="reset" class="float-right btn btn-secondary">
+							</div>
+						</div>
 					</div>
 				</form>
+
 
 				<p>Smart quotes recommended. Report bugs to malinthe AT gmail DOT com
 					<br>Last updated 9th September, 2018: Added support for ඏ, ඐ and ඦු characters.</p>

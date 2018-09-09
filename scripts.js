@@ -541,3 +541,19 @@ function startText() {
 
   document.converter.abhaya.value = text;
 }
+
+function copyText() {
+  var copyText = $('#abhaya');
+  copyText.select();
+  document.execCommand('copy');
+}
+
+$(document).ready(function() {
+  $('#copy')
+    .popover()
+    .on('shown.bs.popover', function() {
+      setTimeout(function() {
+        $('#copy').popover('hide');
+      }, 2000);
+    });
+});
