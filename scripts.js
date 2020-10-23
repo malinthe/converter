@@ -312,7 +312,7 @@ function startText() {
   text = text.replace(/ඬෙ/g, 'f~');
   text = text.replace(/ශෙ/g, 'fY');
   text = text.replace(/ඥෙ/g, 'f{');
-  text = text.replace(/ඳෙ/g, 'fË');
+  text = text.replace(/ඳෙ/g, 'f​|');
   text = text.replace(/ක්‍ෂෙ/g, 'fÌ');
   text = text.replace(/බෙ/g, 'fn');
   text = text.replace(/චෙ/g, 'fp');
