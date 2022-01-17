@@ -513,31 +513,33 @@ function startText() {
   text = text.replace(/ෲ/g, 'DD');
   text = text.replace(/ෟ/g, '!');
   text = text.replace(/ා/g, 'd');
-  text = text.replace(/්/g, 'a');
+  text = text.replace(/යෞ/g, "fh!");
+  text = text.replace(/්/g, "a");
   text = text.replace(/￦/g, '"');
-  text = text.replace(/�/g, 'z');
-  text = text.replace(/￫/g, '^');
-  text = text.replace(/￩/g, '&');
-  text = text.replace(/ￔ/g, ')');
-  text = text.replace(/ￓ/g, '@');
-  text = text.replace(/ￒ/g, '`');
-  text = text.replace(/ￏ/g, '}');
+  text = text.replace(/�/g, "z");
+  text = text.replace(/￫/g, "^");
+  text = text.replace(/￩/g, "&");
+  text = text.replace(/ￔ/g, ")");
+  text = text.replace(/ￓ/g, "@");
+  text = text.replace(/ￒ/g, "`");
+  text = text.replace(/ￏ/g, "}");
   text = text.replace(/ￎ/g, "'");
-  text = text.replace(/\ￍ/g, '¤');
-  text = text.replace(/\ￌ/g, '•');
-  text = text.replace(/\ￊ/g, '›');
-  text = text.replace(/\ﾶ/g, '∙');
-  text = text.replace(/ￕ/g, ']');
-  text = text.replace(/ඏ/g, 'Ì');
-  text = text.replace(/ඐ/g, 'Ï');
-  text = text.replace(/ඦ/g, '`c');
+  text = text.replace(/\ￍ/g, "¤");
+  text = text.replace(/\ￌ/g, "•");
+  text = text.replace(/\ￊ/g, "›");
+  text = text.replace(/\ﾶ/g, "∙");
+  text = text.replace(/ￕ/g, "]");
+  text = text.replace(/ඏ/g, "Ì");
+  text = text.replace(/ඐ/g, "Ï");
+  text = text.replace(/ඦ/g, "`c");
 
-  text = text.replace(/“/g, '—');
-  text = text.replace(/”/g, '˜');
+  text = text.replace(/“/g, "—");
+  text = text.replace(/”/g, "˜");
 
   // cleanup
-  text = text.replace(/`ca/g, '`Ê');
-  text = text.replace(/`cs/g, '`ð');
+  text = text.replace(/`ca/g, "`Ê");
+  text = text.replace(/`cs/g, "`ð");
+  text = text.replace(/hෞ/g, "fh!");
 
   document.converter.abhaya.value = text;
 }
