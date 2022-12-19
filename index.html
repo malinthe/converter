@@ -1,90 +1,165 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Real Time Unicode Converter [Unicode to FMAbhaya]</title>
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Real Time Unicode Converter [Unicode to FMAbhaya]</title>
-	
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/sandstone/bootstrap.min.css">
-</head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/sandstone/bootstrap.min.css"
+    />
+  </head>
 
-<body onLoad="javascript:converter.unicode.focus()">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h1 class="p-3 text-center">Unicode to FMAbhaya Converter</h1>
-				<hr>
-				<br>
+  <body onLoad="javascript:converter.unicode.focus()">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="p-3 text-center">Unicode to FMAbhaya Converter</h1>
+          <hr />
+          <br />
 
-				<form name="converter" class="mb-3">
-					<div class="box">
-						<h4>Unicode (යුනිකෝඩ්)</h4>
-						<textarea class="form-control" onKeyUp="startText()" onClick="startText()" name="unicode" rows="7" onSelect="startText()"
-						 placeholder="Type or paste Sinhala Unicode text here"></textarea>
-						<br/>
-					</div>
+          <form name="converter" class="mb-3">
+            <div class="box">
+              <h4>Unicode (යුනිකෝඩ්)</h4>
+              <textarea
+                class="form-control"
+                onKeyUp="startText()"
+                onClick="startText()"
+                name="unicode"
+                rows="7"
+                onSelect="startText()"
+                placeholder="Type or paste Sinhala Unicode text here"
+              ></textarea>
+              <br />
+            </div>
 
-					<div class="box">
-						<h4>FMAbhaya (අභය)</h4>
-						<textarea class="form-control" style="font-family:'FMAbhaya X', FMAbhaya, sans-serif!important;" id="abhaya" name="abhaya"
-						 rows="7"></textarea>
-						<br/>
+            <div class="box">
+              <h4>FMAbhaya (අභය)</h4>
+              <textarea
+                class="form-control"
+                style="
+                  font-family: 'FMAbhaya X', FMAbhaya, sans-serif !important;
+                "
+                id="abhaya"
+                name="abhaya"
+                rows="7"
+              ></textarea>
+              <br />
 
-						<div class="row">
-							<div class="col">
-								<input id="copy" value="Copy Abhaya Text" type="button" class="ml-1 float-right btn btn-primary" onclick="copyText()" data-placement="top"
-								 data-toggle="popover" title="Copy" data-content="Converted text copied to clipboard.">
-								<input value="Reset" type="reset" class="float-right btn btn-secondary">
-							</div>
-						</div>
-					</div>
-				</form>
+              <div class="row">
+                <div class="col">
+                  <input
+                    id="copy"
+                    value="Copy Abhaya Text"
+                    type="button"
+                    class="ml-1 float-right btn btn-primary"
+                    onclick="copyText()"
+                    data-placement="top"
+                    data-toggle="popover"
+                    title="Copy"
+                    data-content="Converted text copied to clipboard."
+                  />
+                  <input
+                    value="Reset"
+                    type="reset"
+                    class="float-right btn btn-secondary"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
 
+          <p>
+            Smart quotes recommended. Report bugs to malinthe AT gmail DOT com
+            <br />Updated 9th September, 2018: Added support for ඏ, ඐ and ඦු
+            characters. <br />Updated 23rd October, 2020. Fixed bug with
+            character ​ඳෙ. Thank you
+            <a
+              rel="nofollow"
+              target="_blank"
+              href="https://twitter.com/srishanu"
+              >SRIshanu</a
+            ><br />
+            Updated 17th January, 2022. Fixed bug with character යෞ. Thank you
+            Chamuditha Malindu.<br />
+            Last Updated 19th December, 2022. Fixed bug with character ශ්‍රේ.
+            Thank you Ishan Kazthuri.
+          </p>
+          <hr />
 
-				<p>Smart quotes recommended. Report bugs to malinthe AT gmail DOT com
-					<br>Updated 9th September, 2018: Added support for ඏ, ඐ and ඦු characters.
-					<br/>Updated 23rd October, 2020. Fixed bug with character ​ඳෙ. Thank you <a rel="nofollow" target="_blank" href="https://twitter.com/srishanu">SRIshanu</a><br/>
-					Last updated 17th January, 2022. Fixed bug with character යෞ. Thank  you Chamuditha Malindu.</p>
-				<hr/>
+          <p>
+            Modified for FMAbhaya by
+            <a class="links" href="http://malinthe.com">Malinthe Samarakoon</a>
+            <br />
+            Originally Created by LTRL - University of Colombo School of
+            Computing
+          </p>
 
-				<p>Modified for FMAbhaya by
-					<a class="links" href="http://malinthe.com">Malinthe Samarakoon</a>
-					<br/> Originally Created by LTRL - University of Colombo School of Computing
-				</p>
+          <p>
+            For other Converters by LTRL please go to
+            <a
+              class="links"
+              href="http://www.ucsc.cmb.ac.lk/ltrl/services/feconverter/"
+              >Real Time Unicode Converter</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
 
-				<p>For other Converters by LTRL please go to
-					<a class="links" href="http://www.ucsc.cmb.ac.lk/ltrl/services/feconverter/">Real Time Unicode Converter</a>
-				</p>
-			</div>
-		</div>
-	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-	 crossorigin="anonymous"></script>
-	<script src="scripts.js"></script>
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-58280618-1', 'auto');
-		ga('send', 'pageview');
-
-	</script>
-</body>
-
+      ga("create", "UA-58280618-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>
