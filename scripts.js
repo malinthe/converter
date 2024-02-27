@@ -119,6 +119,7 @@ function startText() {
   text = text.replace(/ක්‍රෝ/g, "fl%da");
   text = text.replace(/ප්‍රෝ/g, "fm%da");
   text = text.replace(/ද්‍රෝ/g, "føda");
+  text = text.replace(/ද්‍රෞ/g, "føDa");
   text = text.replace(/ස්‍රෝ/g, "fi%da");
   text = text.replace(/ට්‍රෝ/g, "fg%da");
   text = text.replace(/ත්‍රෝ/g, "f;%da");
