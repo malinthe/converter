@@ -3,6 +3,7 @@ var text;
 function startText() {
   text = document.converter.unicode.value;
 
+  text = text.replace(/ද්‍රෞ/g, "føD");
   text = text.replace(/ද්‍ර/g, "ø");
   text = text.replace(/,/g, "￦");
   text = text.replace(/\'/g, "z");
